@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// Global scope
+int globalTest = 77;
+
 int main()
 {
 	// Expressions - combines things, returns value
@@ -60,4 +63,19 @@ int main()
 	// 5 >= 4 is true
 	// !false is true
 	// !(5 > 6) is true
+
+	// below is invalid - testInt is defined in a scope that the external cout does not have access to
+	/*
+	{
+		int testInt = 99;
+	}
+	cout << testInt << endl;
+	*/
+
+	// Identifiers - name assigned to a program element, such as a variable, type, function, namespace, template or class
+	// Identifiers are case sensitive - myInt != MyInt
+	// Identifiers can ONLY contain letters, numbers, or underscores, and must NOT begin with a number
+	// myBool, my_bool, my_Bool, _myBool are legal
+	// $myBool, my-bool are NOT legal
+	// keywords are not legal for naming - ex. bool, break, for, if, void
 }
